@@ -117,8 +117,38 @@ body {
   background-color: #35B0F5;
   color: #C8D3EC;
 }
+.toggle-icon i{
+   font-size: 30px;
+   color: #CBD5E1;
+}
 
 
+
+/* for underline effect */
+
+.underline {
+  position: relative;
+  display: inline-block;
+}
+
+.underline::before {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #35B0F5;
+  transition: all 0.5s ease;
+}
+
+.underline:hover::before {
+  width: 100%;
+}
+
+
+
+/* main-sections */
 
 .maxwidth-container-body{
     display: flex;
@@ -130,6 +160,8 @@ body {
     background-color: transparent;
     height: auto;
 }
+
+/* intro-section */
 
 .intro-section{
     margin-top: 150px;
@@ -183,27 +215,6 @@ body {
 
 
 
-.underline {
-    position: relative;
-    display: inline-block;
-}
-
-.underline::before {
-    content: "";
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background-color: #35B0F5;
-    transition: all 0.5s ease;
-}
-
-.underline:hover::before {
-    width: 100%;
-}
-
-
   /* About Section */
   .about-section {
     display: flex;
@@ -211,7 +222,7 @@ body {
     justify-content: space-evenly;
     align-items: flex-start;
     background-color: transparent; /* transparent background */
-    margin-top: 100px;
+    margin-top: 200px;
   }
   
   .about-description-container {
@@ -299,6 +310,121 @@ body {
       opacity: 0.7;
     }
   }
+
+
+  /* project-section */
+
+.project-section{
+  text-align: center;
+  margin-top: 200px;
+}
+.project-heading{
+  font-size: 36px;
+  font-weight: 500;
+  color: #CBD5E1;
+  line-height: 40px;
+  margin-bottom: 50px;
+}
+
+.project-main-box{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  row-gap: 40px;
+  justify-content: space-evenly;
+}
+
+ /* project container no.1 */
+
+
+.project-img-container{
+  background-color: #171e2e;
+  height: 325px;
+  width: 315px;
+
+ 
+}
+.project-img-wrapper{
+  width: 100%;
+  height: 75%;
+  position: relative;
+  overflow: hidden; /* Ensures the image doesn't overflow on scaling */
+}
+.project-image{
+  width: 100%;
+  height: 100%;
+  background-color: #ddd; /* Fallback color if no image */
+  background-image: url('./expertizo.png'); /*  for linking image*/
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+
+  transition: transform .3s ease-in-out; /* Smooth scaling transition */
+}
+
+
+.project-description{
+  height: 25%;
+  padding: 12px;
+  
+}
+.details{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.languages{
+  font-size: 12px;
+  color: #CBD5E1;
+  font-family: monospace;
+}
+
+.project-icon1{
+  text-decoration: none;
+  font-size: 22px;
+  color: #C8D3EC;
+}
+.project-icon1:hover{
+  color: #35B0F5;
+}
+
+.project-title-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.project-title{
+  font-size: 16px;
+  font-weight: 700;
+  color: #CBD5E1;
+}
+.project-date{
+  font-size: 16px;
+  color: #CBD5E1;
+  font-weight: 700;
+}
+
+.project-img-container:hover .project-image {
+  transform: scale(1.1); /* Scales up the image smoothly */
+}
+
+.project-img-container:hover .project-title{
+  color: #35B0F5;
+}
+
+.project-img-container:hover .project-date{
+  color: #35B0F5;
+}
+
+
+
+
+
+
+
+
+
 
   /* contact-section */
 
