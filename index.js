@@ -49,18 +49,13 @@ function toggleTheme() {
         document.getElementById("nav-sun-icon").classList.remove("hidden");
     }
 
-    // Update text color for other elements (optional)
-    const textElements = document.querySelectorAll(".text");
-    textElements.forEach((element) => {
-        element.style.color = isDarkMode ? "#1E293B" : "#E2E8F0"; // Light/Dark text color
-    });
 }
 
        // navbar navbar javascript
 
 window.addEventListener("scroll", function () {
     const navbar = document.querySelector(".navbar");
-    if (window.scrollY > 50) {
+    if (window.scrollY > 20) {
         navbar.style.backgroundColor = "#171e2e"; // Fully opaque
         navbar.style.boxShadow = "0 4px 10px rgba(0, 0, 0, 0.2)"; // Add shadow
     } else {
@@ -68,3 +63,32 @@ window.addEventListener("scroll", function () {
         navbar.style.boxShadow = "none"; // Remove shadow
     }
 });
+
+document.querySelector('.toggle-icon').addEventListener('click', function () {
+    const navbar = document.querySelector('.toggle-navbar-wrapper');
+    navbar.classList.toggle('active');
+  });
+
+
+
+//   for text animation
+// Select all elements with the class 'text-animation'
+const animatedElements = document.querySelectorAll('.text-animation');
+
+// Function to check if an element is in the viewport
+const isInViewport = (element) => {
+  const rect = element.getBoundingClientRect();
+  return rect.top <= window.innerHeight && rect.bottom >= 0;
+};
+
+// Add scroll event listener
+window.addEventListener('scroll', () => {
+  animatedElements.forEach((element) => {
+    if (isInViewport(element)) {
+      element.classList.add('visible'); // Add the class when visible
+    } else {
+      element.classList.remove('visible'); // Remove the class when out of view
+    }
+  });
+});
+

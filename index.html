@@ -25,24 +25,47 @@
       </div>
       <div class="links-box">
         <ul>
-          <li><a class="underline" href="#">About</a></li>
-          <li><a class="underline" href="#">Skills</a></li>
+          <li><a class="underline" href="#about">About</a></li>
+          <li><a class="underline" href="#skills">Skills</a></li>
           <li><a class="underline" href="#">Experience</a></li>
-          <li><a class="underline" href="#">Projects</a></li>
-          <li><a class="underline" href="#">Contact</a></li>
+          <li><a class="underline" href="#projects">Projects</a></li>
+          <li><a class="underline" href="#contact">Contact</a></li>
           <span class="resume-btn"><a id="resume-btn-text" href="">Resume</a></span>
 
           <div>
             <!-- Icons for toggling themes -->
-            <i id="nav-moon-icon" class="hidden" onclick="toggleTheme()" style="cursor: pointer;">🌙</i>
-            <i id="nav-sun-icon" onclick="toggleTheme()" style="cursor: pointer;">☀️</i>
+            <i id="nav-moon-icon" class="ri-moon-line hidden" onclick="toggleTheme()" style="cursor: pointer;"></i>
+            <i id="nav-sun-icon" class="ri-sun-line" onclick="toggleTheme()" style="cursor: pointer;"></i>
           </div>
 
-
         </ul>
+
       </div>
+      <!-- icon for toggling navbar -->
       <div class="toggle-icon">
         <i class="fa-solid fa-bars"></i>
+      </div>
+
+    </div>
+    <div class="toggle-navbar-container">
+      <div class="toggle-navbar-wrapper">
+        <div class="toggle-link-box">
+          <ul>
+            <li><a class="underline" href="#">About</a></li>
+            <li><a class="underline" href="#">Skills</a></li>
+            <li><a class="underline" href="#">Experience</a></li>
+            <li><a class="underline" href="#">Projects</a></li>
+            <li><a class="underline" href="#">Contact</a></li>
+            <span class="resume-btn"><a id="resume-btn-text" href="">Resume</a></span>
+            <div class="theme-btn">
+              <!-- Icons for toggling themes -->
+              <i id="nav-moon-icon" class="ri-moon-line hidden" onclick="toggleTheme()" style="cursor: pointer;"></i>
+              <i id="nav-sun-icon" class="ri-sun-line" onclick="toggleTheme()" style="cursor: pointer;"></i>
+            </div>
+          </ul>
+
+
+        </div>
       </div>
     </div>
   </div>
@@ -58,15 +81,17 @@
         <p id="intro-second-line">Hassan khan. </p>
         <p id="intro-third-line">I create visually pleasing interfaces for the web.</p>
         <p id="intro-description">I'm a passionate Frontend web developer with hands-on experience in building web and
-          web
-          clones using HTML, CSS, BOOTSTRAP and JAVA SCRIPT</p>
+          web clones using HTML, CSS, BOOTSTRAP and JAVA SCRIPT</p>
         <p id="intro-last-line">Currently available for freelance</p>
 
       </div>
 
       <!-- about section -->
 
-      <div class="about-section">
+      <div id="about"></div>
+
+      <div class="about-section text-animation">
+
         <div class="about-description-container">
           <p class="about-heading">About Me</p>
           <p class="about-paragraph">My name is <span class="bold-text">Hassan Khan</span>, a BBA (<span
@@ -100,7 +125,8 @@
       </div>
 
       <!-- projects-section -->
-      <div class="project-section">
+       <div id="projects"></div>
+      <div class="project-section text-animation">
         <p class="project-heading">Other Projects</p>
 
         <div class="project-main-box">
@@ -108,172 +134,201 @@
           <!-- project container no.1 -->
 
 
-          <a href="https://hassank0550.github.io/Expertizo-clone/" class="clone-link" target="_blank">
-            <div class="project-main-container">
-              <div class="project-img-container">
+
+          <div class="project-main-container">
+            <div class="project-img-container">
+              <a href="https://hassank0550.github.io/Expertizo-clone/" class="clone-link" target="_blank">
                 <div class="project-img-wrapper">
                   <div class="project-image">
                     <!-- image of project -->
                   </div>
                 </div>
-                <div class="project-description">
-                  <div class="details">
-                    <p class="languages">HTML <span class="upward-slash">|</span> CSS </p>
-                    <div class="icon-links">
-                      <a class="project-icon1" href=""><i class="ri-github-line"></i></a>
-                      <a class="project-icon1" href=""><i class="ri-external-link-line"></i></a>
-                    </div>
+              </a>
+              <div class="project-description">
+                <div class="details">
+                  <p class="languages">HTML <span class="upward-slash">|</span> CSS </p>
+                  <div class="icon-links">
+                    <a class="project-icon1" href=""><i class="ri-github-line"></i></a>
+                    <a class="project-icon1" href=""><i class="ri-external-link-line"></i></a>
                   </div>
-                  <div class="project-title-container">
-                    <p class="project-title">Expertizo Clone</p>
-                    <p class="project-date">2024</p>
-                  </div>
-
                 </div>
+                <div class="project-title-container">
+                  <p class="project-title">Expertizo Clone</p>
+                  <p class="project-date">2024</p>
+                </div>
+
               </div>
             </div>
-          </a>
+          </div>
+            <!-- end of box 1 -->
 
           <!-- project container no.1 -->
 
-          <a href="https://hassank0550.github.io/Expertizo-clone/" class="clone-link" target="_blank">
-            <div class="project-main-container">
-              <div class="project-img-container">
+
+
+          <div class="project-main-container">
+            <div class="project-img-container">
+              <a href="https://hassank0550.github.io/Expertizo-clone/" class="clone-link" target="_blank">
                 <div class="project-img-wrapper">
                   <div class="project-image">
                     <!-- image of project -->
                   </div>
                 </div>
-                <div class="project-description">
-                  <div class="details">
-                    <p class="languages">HTML <span class="upward-slash">|</span> CSS </p>
-                    <div class="icon-links">
-                      <a class="project-icon1" href=""><i class="ri-github-line"></i></a>
-                      <a class="project-icon1" href=""><i class="ri-external-link-line"></i></a>
-                    </div>
+              </a>
+              <div class="project-description">
+                <div class="details">
+                  <p class="languages">HTML <span class="upward-slash">|</span> CSS </p>
+                  <div class="icon-links">
+                    <a class="project-icon1" href=""><i class="ri-github-line"></i></a>
+                    <a class="project-icon1" href=""><i class="ri-external-link-line"></i></a>
                   </div>
-                  <div class="project-title-container">
-                    <p class="project-title">Expertizo Clone</p>
-                    <p class="project-date">2024</p>
-                  </div>
-
                 </div>
+                <div class="project-title-container">
+                  <p class="project-title">Expertizo Clone</p>
+                  <p class="project-date">2024</p>
+                </div>
+
               </div>
             </div>
-          </a>
+          </div>
+            <!-- end of box 1 -->
+   
+                      <!-- project container no.1 -->
 
-          <!-- project container no.1 -->
 
-          <a href="https://hassank0550.github.io/Expertizo-clone/" class="clone-link" target="_blank">
-            <div class="project-main-container">
-              <div class="project-img-container">
+
+          <div class="project-main-container">
+            <div class="project-img-container">
+              <a href="https://hassank0550.github.io/Expertizo-clone/" class="clone-link" target="_blank">
                 <div class="project-img-wrapper">
                   <div class="project-image">
                     <!-- image of project -->
                   </div>
                 </div>
-                <div class="project-description">
-                  <div class="details">
-                    <p class="languages">HTML <span class="upward-slash">|</span> CSS </p>
-                    <div class="icon-links">
-                      <a class="project-icon1" href=""><i class="ri-github-line"></i></a>
-                      <a class="project-icon1" href=""><i class="ri-external-link-line"></i></a>
-                    </div>
+              </a>
+              <div class="project-description">
+                <div class="details">
+                  <p class="languages">HTML <span class="upward-slash">|</span> CSS </p>
+                  <div class="icon-links">
+                    <a class="project-icon1" href=""><i class="ri-github-line"></i></a>
+                    <a class="project-icon1" href=""><i class="ri-external-link-line"></i></a>
                   </div>
-                  <div class="project-title-container">
-                    <p class="project-title">Expertizo Clone</p>
-                    <p class="project-date">2024</p>
-                  </div>
-
                 </div>
+                <div class="project-title-container">
+                  <p class="project-title">Expertizo Clone</p>
+                  <p class="project-date">2024</p>
+                </div>
+
               </div>
             </div>
-          </a>
+          </div>
+            <!-- end of box 1 -->
+
+                      <!-- project container no.1 -->
 
 
-          <!-- project container no.1 -->
 
-          <a href="https://hassank0550.github.io/Expertizo-clone/" class="clone-link" target="_blank">
-            <div class="project-main-container">
-              <div class="project-img-container">
+          <div class="project-main-container">
+            <div class="project-img-container">
+              <a href="https://hassank0550.github.io/Expertizo-clone/" class="clone-link" target="_blank">
                 <div class="project-img-wrapper">
                   <div class="project-image">
                     <!-- image of project -->
                   </div>
                 </div>
-                <div class="project-description">
-                  <div class="details">
-                    <p class="languages">HTML <span class="upward-slash">|</span> CSS </p>
-                    <div class="icon-links">
-                      <a class="project-icon1" href=""><i class="ri-github-line"></i></a>
-                      <a class="project-icon1" href=""><i class="ri-external-link-line"></i></a>
-                    </div>
+              </a>
+              <div class="project-description">
+                <div class="details">
+                  <p class="languages">HTML <span class="upward-slash">|</span> CSS </p>
+                  <div class="icon-links">
+                    <a class="project-icon1" href=""><i class="ri-github-line"></i></a>
+                    <a class="project-icon1" href=""><i class="ri-external-link-line"></i></a>
                   </div>
-                  <div class="project-title-container">
-                    <p class="project-title">Expertizo Clone</p>
-                    <p class="project-date">2024</p>
-                  </div>
-
                 </div>
+                <div class="project-title-container">
+                  <p class="project-title">Expertizo Clone</p>
+                  <p class="project-date">2024</p>
+                </div>
+
               </div>
             </div>
-          </a>
+          </div>
+            <!-- end of box 1 -->
 
-          <!-- project container no.1 -->
+                      <!-- project container no.1 -->
 
-          <a href="https://hassank0550.github.io/Expertizo-clone/" class="clone-link" target="_blank">
-            <div class="project-main-container">
-              <div class="project-img-container">
+
+
+          <div class="project-main-container">
+            <div class="project-img-container">
+              <a href="https://hassank0550.github.io/Expertizo-clone/" class="clone-link" target="_blank">
                 <div class="project-img-wrapper">
                   <div class="project-image">
                     <!-- image of project -->
                   </div>
                 </div>
-                <div class="project-description">
-                  <div class="details">
-                    <p class="languages">HTML <span class="upward-slash">|</span> CSS </p>
-                    <div class="icon-links">
-                      <a class="project-icon1" href=""><i class="ri-github-line"></i></a>
-                      <a class="project-icon1" href=""><i class="ri-external-link-line"></i></a>
-                    </div>
+              </a>
+              <div class="project-description">
+                <div class="details">
+                  <p class="languages">HTML <span class="upward-slash">|</span> CSS </p>
+                  <div class="icon-links">
+                    <a class="project-icon1" href=""><i class="ri-github-line"></i></a>
+                    <a class="project-icon1" href=""><i class="ri-external-link-line"></i></a>
                   </div>
-                  <div class="project-title-container">
-                    <p class="project-title">Expertizo Clone</p>
-                    <p class="project-date">2024</p>
-                  </div>
-
                 </div>
+                <div class="project-title-container">
+                  <p class="project-title">Expertizo Clone</p>
+                  <p class="project-date">2024</p>
+                </div>
+
               </div>
             </div>
-          </a>
+          </div>
+            <!-- end of box 1 -->
 
-          <!-- project container no.1 -->
 
-          <a href="https://hassank0550.github.io/Expertizo-clone/" class="clone-link" target="_blank">
-            <div class="project-main-container">
-              <div class="project-img-container">
+                      <!-- project container no.1 -->
+
+
+
+          <div class="project-main-container">
+            <div class="project-img-container">
+              <a href="https://hassank0550.github.io/Expertizo-clone/" class="clone-link" target="_blank">
                 <div class="project-img-wrapper">
                   <div class="project-image">
                     <!-- image of project -->
                   </div>
                 </div>
-                <div class="project-description">
-                  <div class="details">
-                    <p class="languages">HTML <span class="upward-slash">|</span> CSS </p>
-                    <div class="icon-links">
-                      <a class="project-icon1" href=""><i class="ri-github-line"></i></a>
-                      <a class="project-icon1" href=""><i class="ri-external-link-line"></i></a>
-                    </div>
+              </a>
+              <div class="project-description">
+                <div class="details">
+                  <p class="languages">HTML <span class="upward-slash">|</span> CSS </p>
+                  <div class="icon-links">
+                    <a class="project-icon1" href=""><i class="ri-github-line"></i></a>
+                    <a class="project-icon1" href=""><i class="ri-external-link-line"></i></a>
                   </div>
-                  <div class="project-title-container">
-                    <p class="project-title">Expertizo Clone</p>
-                    <p class="project-date">2024</p>
-                  </div>
+                </div>
+                <div class="project-title-container">
+                  <p class="project-title">Expertizo Clone</p>
+                  <p class="project-date">2024</p>
+                </div>
 
+              </div>
+            </div>
+          </div>
+            <!-- end of box 1 -->
+
+           <!-- skills section -->
+           <div class="skill-section">
+            <div class="skill-title">
+              <div class="skill-container">
+                <div class="skill-image-wrapper">
+                  
                 </div>
               </div>
             </div>
-          </a>
+           </div>
+
         </div>
       </div>
 
@@ -283,7 +338,7 @@
 
       <!-- contact-section -->
 
-      <div class="contact-section">
+      <div class="contact-section text-animation">
         <div class="contact-section-wrapper">
           <p class="contact-heading">What's Next</p>
           <p class="contact-title">Get in Touch</p>

@@ -17,7 +17,7 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    
+    scroll-behavior: smooth;
 }
 
 body {
@@ -34,21 +34,6 @@ body {
 }
 
 /* header-section */
-
-/* .header{
-    width: 100%;
-    height: 70px;
-    position: relative;
-}
-.navbar{
-    height: 100%;
-    background-color: transparent;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 111111;
-    padding: 0px 50px;
-} */
 
 .header {
   width: 100%;
@@ -70,8 +55,6 @@ body {
   transition: background-color 0.3s ease, padding 0.3s ease; /* Smooth transitions */
 }
 
-
-
 .logo{
     font-family: logo-font;
     color:  rgb(56, 189, 248);
@@ -79,12 +62,15 @@ body {
     font-size: 30px;
     line-height: 32px;
 }
+
+
 .links-box ul{
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 35px;
 }
+
 .links-box ul li{
     list-style: none;
 }
@@ -117,10 +103,102 @@ body {
   background-color: #35B0F5;
   color: #C8D3EC;
 }
-.toggle-icon i{
+.toggle-icon{
    font-size: 30px;
    color: #CBD5E1;
+   display: none;
 }
+
+.toggle-navbar-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.toggle-navbar-wrapper {
+  background-color: rgba(30, 41, 59, 0.5); /* Semi-transparent dark background */
+  border-radius: 20px;
+  width: 90%;
+  height: 90%;
+  backdrop-filter: blur(10px);
+  display: none;
+  margin-top: 10px;
+}
+
+.toggle-link-box ul{
+  padding: 50px;
+}
+
+.toggle-link-box ul li{
+  list-style: none;
+  margin-bottom: 20px;
+}
+.toggle-link-box ul li a{
+  text-decoration: none;
+  font-family: sans-serif;
+  font-size: 14px;
+  color: #C8D3EC;
+}
+.toggle-link-box ul li a:hover{
+  color: #35B0F5;
+  transition: .5s;
+
+}
+
+#nav-sun-icon{
+  font-size: 30px;
+  color: #ddd;
+}
+
+#nav-moon-icon{
+  font-size: 30px;
+  color: #ddd;
+}
+
+.theme-btn{
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.toggle-navbar-wrapper.active {
+  display: block; /* Show when active */
+}
+
+
+
+
+/* Mobile-first media query for navbar */
+@media (max-width: 768px) {
+  .toggle-icon {
+    display: block; /* Show toggle button on smaller screens */
+  }
+  .links-box {
+    display: none; /* Hide links by default on small screens */
+  }
+  .about-profile-pic-container {
+    display: none; /* Hide profile picture on small screens */
+  }
+}
+
+
+/* Medium screens: Adjust layout */
+@media (max-width: 1000px) {
+  .about-section {
+    display: block; /* Show as block layout for medium screens */
+  }
+  .about-description-container {
+    width: 100%; /* Full width for smaller screens */
+  }
+}
+
+/* Optional: Add styles for larger screens if needed */
+@media (min-width: 1001px) {
+  .about-section {
+    display: flex; /* Ensure it's visible on larger screens */
+  }
+}
+
 
 
 
@@ -147,6 +225,36 @@ body {
 }
 
 
+/* upward Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Default state */
+.text-animation {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Animation when element is visible */
+.text-animation.visible {
+  animation: fadeIn 1s ease-out;
+  opacity: 1; /* Ensure visibility */
+  transform: translateY(0);
+}
+
+
+
+/* wave animation */
+  
 
 /* main-sections */
 
@@ -154,11 +262,13 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
+    overflow-wrap: break-word;
 }
 .maxwidth-container{
-    width: 1000px;
-    background-color: transparent;
-    height: auto;
+  width: 90%;
+  /* background-color: white; */
+  height: auto;
 }
 
 /* intro-section */
@@ -193,7 +303,6 @@ body {
 
 }
 #intro-description{
-    width: 650px;
     color:  rgb(148, 163, 184);
     font-weight: 400;   
     font-family: sans-serif;
@@ -219,7 +328,7 @@ body {
   .about-section {
     display: flex;
     flex-wrap: wrap; /* Ensures responsiveness */
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: flex-start;
     background-color: transparent; /* transparent background */
     margin-top: 200px;
@@ -262,7 +371,7 @@ body {
   /* Profile Picture Section */
 
   .about-profile-pic-container {
-    width: 35%; /* Profile picture takes 35% of the width */
+    width: 50%; /* Profile picture takes 35% of the width */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -298,6 +407,20 @@ body {
     box-sizing: border-box;
     animation: pulse-border 3s infinite ease-in-out; /* Optional animation */
   }
+
+  /* profile pic2 */
+
+  .about-profile-pic-container1 {
+    width: 35%; /* Profile picture takes 35% of the width */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto 0px;
+    position: relative;
+    display: none;
+  }
+
+
   
   /* Animation for the Border */
   @keyframes pulse-border {
@@ -315,8 +438,8 @@ body {
   /* project-section */
 
 .project-section{
-  text-align: center;
   margin-top: 200px;
+  text-align: center;
 }
 .project-heading{
   font-size: 36px;
@@ -328,10 +451,12 @@ body {
 
 .project-main-box{
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 5px;
   row-gap: 40px;
-  justify-content: space-evenly;
+  background-color: transparent;
 }
 
  /* project container no.1 */
@@ -436,7 +561,7 @@ body {
 
 .contact-section-wrapper{
   text-align: center;
-  margin-top: 100px;
+  margin-top: 200px;
   width: 70%;
 }
 .contact-heading{
@@ -482,18 +607,19 @@ body {
 
 
 
-
+/* 
 
   @media (max-width: 768px) {
+   
     .about-section {
-      flex-direction: column; /* Stack items vertically */
+      flex-direction: column; 
       align-items: center;
       text-align: center;
     }
   
     .about-description-container, 
     .about-profile-pic-container {
-      flex-basis: 100%; /* Full width on smaller screens */
+      flex-basis: 100%;
       max-width: 100%;
     }
   
@@ -502,4 +628,4 @@ body {
       height: 150px;
     }
   }
-  
+   */
