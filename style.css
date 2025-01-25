@@ -27,6 +27,7 @@ body {
   padding: 0;
   box-sizing: border-box;
   background-color: #0F172A;
+  color: black;
   
 }
 .dark-theme{
@@ -266,7 +267,7 @@ body {
     overflow-wrap: break-word;
 }
 .maxwidth-container{
-  width: 90%;
+  width: 80%;
   /* background-color: white; */
   height: auto;
 }
@@ -452,9 +453,9 @@ body {
 .project-main-box{
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
   flex-wrap: wrap;
-  gap: 5px;
+  gap:x;
   row-gap: 40px;
   background-color: transparent;
 }
@@ -541,6 +542,65 @@ body {
 .project-img-container:hover .project-date{
   color: #35B0F5;
 }
+
+
+/* skill section */
+
+.skill-section{
+  margin-top: 200px;
+}
+.skill-title{
+  font-size: 36px;
+  font-weight: 500;
+  color: rgb(203, 213, 225);
+  line-height: 40px;
+}
+.skill-container{
+  margin-top: 100px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.skill-image-wrapper{
+  width: 50%;
+}
+.skill-img{
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+
+}
+.skill-desc-wrapper{
+  width: 50%;
+}
+.skill-desc-title{
+  font-size: 30px;
+  font-weight: 400;
+  color: rgb(148, 163, 184);
+  line-height: 36px;
+}
+.skill-language-list{
+  margin: 40px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.skill-language-list i{
+  background-color: #1E293B;
+  padding: 20px;
+  font-size: 30px;
+  border-radius: 100%;
+  
+}
+.skill-description{
+  font-size: 16px;
+  font-weight: 400;
+  color: rgb(203, 213, 225);
+  line-height: 24px;
+  text-align: start;
+}
+
 
 
 
